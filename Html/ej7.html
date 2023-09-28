@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <title>Ejercicios JavaScript #7</title>
+</head>
+
+<body>
+    <h1 class="py-2 px-5">Tablas de multiplicar hasta 10!</h1>
+    
+    <div class="row px-4 mx-0">
+        <h3 class="py-2">Bienvenido a las tablas de multiplicar hasta 10.</h3>
+        <p>El sistema te mostrara la lista de multiplos de los numeros de 1 a 10.</p>
+        <div class="col-5">
+            <div id="numberHelp" class="form-text py-2">Pulsa el boton para comenzar.
+            </div>   
+            <input type="submit" class="btn btn-primary" value="Comenzar" onclick="multiplos()" 
+            aria-describedby="numberHelp">
+        </div>
+        <div class="row px-4 mb-3">
+            <div class="col-3">
+                <span id="lista"></span>
+            </div>
+            <div class="col-3">
+                <br>
+                <span id="sumatoria"></span>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/ej7.js"></script>
+    <!-- Desactivar submit de formulario con enter, solo permite usar el boton de "calcular" -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('input[type=number]').forEach( node => node.addEventListener('keypress', e => {
+          if(e.keyCode == 13) {
+            e.preventDefault();
+          }
+        }))
+      });</script>
+</body>
+
+</html>

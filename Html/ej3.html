@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <title>Ejercicios JavaScript #3</title>
+</head>
+
+<body>
+    <h1 class="py-2 px-5">Calculador de multiplos de un número.</h1>
+
+    <div class="row px-4 mx-0">
+        <h3 class="py-2">Bienvenido al calculador de multiplos.</h3>
+        <p>Debes ingresar el numero al que quieres conocer sus multiplos y 
+            hasta que multiplo quieres calcular, ingresa los valores 
+        a continuación:</p>
+        <div class="col-5">
+            <form action="" method="get" id="calculador">
+                <label for="Input_numero" class="form-label">
+                    <h5>Ingresa el numero:</h5>
+                </label>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control bg-opacity-75" min="1" id="Input_numero" placeholder="minimo 1"
+                        aria-describedby="numberHelp">
+                    <div id="numberHelp" class="form-text px-2">Ingresa el numero sin puntos o comas.</div>
+                </div>
+                <label for="Input_limite" class="form-label">
+                    <h5>Ingresa el limite de multiplos:</h5>
+                </label>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control bg-opacity-75" min="1" id="Input_limite" placeholder="minimo 1"
+                        aria-describedby="numberHelp">
+                    <div id="numberHelp" class="form-text px-2">Ingresa el numero sin puntos o comas.</div>
+                </div>
+            </form>
+            <input type="submit" class="btn btn-primary" value="calcular" onclick="calcular_multiplos()">
+        </div>
+    </div>
+    <div class="row px-4 mb-3">
+        <div class="col-3">
+            <br>
+            <span id="lista"></span>
+        </div>
+        <div class="col-3">
+            <br>
+            <span id="sumatoria"></span>
+        </div>
+    </div>
+    <script src="../Js/ej3.js"></script>
+    <!-- Desactivar submit de formulario con enter, solo permite usar el boton de "calcular" -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('input[type=number]').forEach(node => node.addEventListener('keypress', e => {
+                if (e.keyCode == 13) {
+                    e.preventDefault();
+                }
+            }))
+        });</script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <title>Ejercicios JavaScript #4</title>
+</head>
+
+<body>
+    <h1 class="py-2 px-5">Buscador de numeros.</h1>
+
+    <div class="row px-4 mx-0">
+        <h3 class="py-2">Bienvenido al buscador de numeros.</h3>
+        <p>Por favor ingresa el número de elementos que quieres guardar en la lista, el sistema 
+            te mostrara los valores almacenados y su ordén.</p>
+        <p>En el cuadro de busqueda puedes consultar la posición de un valor a buscar, si el 
+            valor no se encuentra en la lista el sitema te informara.</p>
+        <div class="col-4 mb-4">
+            <form action="" method="get" id="form_1">
+                <label for="Input_matriz" class="form-label">
+                    <h5>Longitud de la lista:</h5>
+                </label>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control bg-opacity-75" min="2" id="Input_matriz" placeholder="2-20"
+                        aria-describedby="numberHelp">
+                    <div id="numberHelp" class="form-text px-2">Ingresa un numero entero entre 2 y 20.</div>
+                </div>
+            </form>
+            <input type="submit" class="btn btn-primary" value="Empezar" onclick="llenar_matriz()">
+        </div>
+
+        <div class="col-4 mb-4">
+            <form action="" method="get" id="form_2">
+                <label for="Input_busqueda" class="form-label">
+                    <h5>Numero a Buscar:</h5>
+                </label>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control bg-opacity-75" id="Input_busqueda" placeholder="numero"
+                        aria-describedby="numberHelp">
+                    <div id="numberHelp" class="form-text px-2">Ingresa el numero que quieres buscar de la lista.</div>
+                </div>
+            </form>
+            <input type="submit" class="btn btn-primary" value="Buscar" onclick="buscador()">
+        </div>
+    </div>
+
+    <div class="row px-4 mx-0 mb-3">
+        <div class="col-4 mb-4">
+            <br>
+            <span id="lista"></span>
+        </div>
+        <div class="col-4 mb-4">
+            <br>
+            <span id="resultado"></span>
+        </div>
+    </div>
+    <script src="../Js/ej4.js"></script>
+</body>
+
+</html>
